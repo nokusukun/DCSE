@@ -16,7 +16,10 @@ After installing the plugin, a text box will appear on the channel header.
 
 
 Set the passphrase that you and the other members have agreed on.
-*The passphrases are all saved in localStoarage and is unique for each user/server.*
+
+**The passphrases are all saved in localStoarage and is unique for each user/server.**
+
+**_You must change channels if you changed passphrases to reload the changes._**
 
 ![During](http://i.imgur.com/UuELGYS.png)
 
