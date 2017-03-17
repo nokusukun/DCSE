@@ -7,7 +7,7 @@ Get (almost) seamless client side encryption for discord. It works for Private M
 This uses the crypto.js library for AES Encryption/Decryption. 100% unicode compatible.
 
 ## Disclaimer
-This does not provide 100% security. The plugin can only get as secure if you take care in exchanging passphrases and safeguarding your PC from localStorage theft. This only provides an intermediary between the discord servers and you.
+This does not provide 100% security. The plugin can only get as secure if you take care in exchanging passphrases and safeguarding your PC from localStorage theft. This only provides an additional layer of security between the discord servers and you.
 
 ## Usage: Setting Up
 -------
