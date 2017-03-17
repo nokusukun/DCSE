@@ -8,11 +8,13 @@ discordCSE.prototype.getVersion = function () {return "0.1"};
 discordCSE.prototype.getAuthor = function () {return "Noku#1934"};
 discordCSE.prototype.headerFormat =  "dCSE";
 discordCSE.prototype.cseFormat = "cse1";
-discordCSE.prototype.defpassphrase = "default"; //please don't ever use a defualt passphrase
+discordCSE.prototype.defpassphrase = "default"; //デフォルト値を使用しないでください
 discordCSE.prototype.passlist = {};
 
-discordCSE.prototype.stop = function () {
 
+discordCSE.prototype.stop = function () {
+	$("#dcse-passphrase").remove();
+	$(document).off("keyup.cse");
 };
 
 discordCSE.prototype.loadPassphrase = function () {
@@ -63,11 +65,12 @@ discordCSE.prototype.process = function (force) {
 				//if(passphrase == undefined) passphrase = t.defpassphrase;
 				console.log(passphrase)
 				dmsg = t.decrypt(datax[2].split("(edited)")[0], passphrase);
-				if(dmsg != ""){
+				if(dmsg != "" && dmsg != undefined){
 					message.text("[E]" + dmsg)
 					this.style.color = "green";
 				}else{
-					message.text("[E]" + dmsg)
+					message.text("[?!]")
+					this.style.color = "red";
 				}
 
 			}else{
@@ -84,13 +87,18 @@ discordCSE.prototype.process = function (force) {
 discordCSE.prototype.onSwitch = function() {
 	if($(".dcse-passphrase").length == 0){
 		$(".header-toolbar").prepend("<input class='dcse-passphrase' id='dcse-passphrase'>");
+		$("#dcse-passphrase").css("border-radius", "5px");
+		$("#dcse-passphrase").attr("placeholder", "DCSE Passphrase");
+		$("#dcse-passphrase").blur(function () {
+			t.saveP();
+		});
 	}
 	if(this.passlist[this.chanID()] != undefined){
 		$("#dcse-passphrase").css("background", "green")
 	}else{
 		$("#dcse-passphrase").css("background", "white")
-		$("#dcse-passphrase").attr("placeholder", "DCSE Passphrase");
 	}
+
 	this.process()
 };
 
@@ -108,7 +116,7 @@ discordCSE.prototype.saveP = function(){
 		t.process("force");
 		console.log("saving... C");
 		$("#dcse-passphrase")[0].value = "";
-		$("#dcse-passphrase").css("color", "green")
+		$("#dcse-passphrase").css("background", "green")
 		$("#dcse-passphrase").attr("placeholder", "Passphrase is set")
 }
 
