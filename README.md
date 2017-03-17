@@ -38,7 +38,7 @@ Encrypted messages with the wrong password is shown as a red `[?!]`
 
 ![Red pls](http://i.imgur.com/qE3Ti1I.png)
 
-This is what the messages look like from anyone who doesn't have a plugin.
+This is what the messages look like from anyone who doesn't have the plugin installed.
 
 ![SPAM](http://i.imgur.com/ggBtXQe.png)
 
