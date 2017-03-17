@@ -45,5 +45,7 @@ This is what the messages look like from anyone who doesn't have the plugin inst
 ## Stuff to do
 ------
 TODO1: Figure out a way to catch the messages and encrypt them upon hitting the enter key.
+
 TODO2: Make a toggle setting if TODO1 is solved.
+
 TODO3: Write a better readme.md
