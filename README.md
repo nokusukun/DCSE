@@ -29,7 +29,9 @@ _The textbox becomes green if there's a passphrase already set._
 
 ## Usage: Actually using it
 ------
-To send an encrypted message, just append your text with `..cse` to encrypt it.
+To send an encrypted message, just append your text with `..cse[space]` to encrypt it.
+
+_Issue: The space is needed because of discord's internal processes. Probably has to do with react's model bindings. If anyone has a fix to avoid adding space to update react's internal models then that would be great!_
 
 [Here's a gifv in action](http://i.imgur.com/cZZPNAC.gifv)
 
