@@ -47,6 +47,11 @@ This is what the messages look like from anyone who doesn't have the plugin inst
 
 ![SPAM](http://i.imgur.com/ggBtXQe.png)
 
+## Issues
+------
+Programmatically change the chatbox value. Discord has moved to a new process where it's internally keeping track of the text in the chatbox. The only way for the encrypted text to stick is for it to be preceeded by a space hence the `..cse[space]`.
+
+
 ## Stuff to do
 ------
 TODO1: Figure out a way to catch the messages and encrypt them upon hitting the enter key.
